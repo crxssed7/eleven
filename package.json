@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "11ty default template",
   "scripts": {
-    "start:eleventy": "npx @11ty/eleventy --serve",
     "start:tailwind": "npx tailwindcss -i ./assets/css/styles.css -o ./_site/assets/css/styles.css --watch",
+    "start:eleventy": "npx @11ty/eleventy --serve",
     "start": "concurrently \"npm run start:eleventy\" \"npm run start:tailwind\"",
-    "build:css": "npx tailwindcss -i ./assets/css/styles.css -o ./_site/assets/css/styles.css",
-    "build:html": "npx @11ty/eleventy",
-    "build": "npm run build:html && npm run build:css"
+    "build:tailwind": "npx tailwindcss -i ./assets/css/styles.css -o ./_site/assets/css/styles.css",
+    "build:eleventy": "npx @11ty/eleventy",
+    "build": "npm run build:eleventy && npm run build:tailwind"
   },
   "author": "crxssed",
   "dependencies": {
